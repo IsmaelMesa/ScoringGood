@@ -7,7 +7,7 @@ import com.vehicleRentingPersona.vehicleRentingPersona.models.RentaAnual;
 
 public interface RentaAnualService {
 
-    RentaAnual addRentaAnual(RentaAnual rentaAnual) throws RequestApiValidationException, RequiredMissingFieldException;
+    RentaAnual addRentaAnual(RentaAnual rentaAnual);
 
 
 

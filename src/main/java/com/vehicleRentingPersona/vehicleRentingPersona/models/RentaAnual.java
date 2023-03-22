@@ -9,16 +9,16 @@ public class RentaAnual {
     private Profesion profesion_id;
     private int anio;
 
-    private int importe;
+    private double importe;
     private Boolean is_cuenta_propia;
     private String iae;
     private String cif_empleador;
     private Date fecha_inicio_empleo;
 
-    public RentaAnual(int renta_id, Persona personaId, Profesion profesionId, int anio, int importe, Boolean is_cuenta_propia, String iae, String cif_empleador, Date fecha_inicio_empleo) {
+    public RentaAnual(int renta_id, Persona persona_id, Profesion profesion_id, int anio, double importe, Boolean is_cuenta_propia, String iae, String cif_empleador, Date fecha_inicio_empleo) {
         this.renta_id = renta_id;
-        persona_id = personaId;
-        profesion_id = profesionId;
+        this.persona_id = persona_id;
+        this.profesion_id = profesion_id;
         this.anio = anio;
         this.importe = importe;
         this.is_cuenta_propia = is_cuenta_propia;
@@ -59,11 +59,11 @@ public class RentaAnual {
         this.anio = anio;
     }
 
-    public int getImporte() {
+    public double getImporte() {
         return importe;
     }
 
-    public void setImporte(int importe) {
+    public void setImporte(double importe) {
         this.importe = importe;
     }
 

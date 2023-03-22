@@ -24,14 +24,7 @@ public class RentaAnualController {
     @PostMapping("/rentaAnual")
     ResponseEntity addRentaAnual(@RequestBody RentaAnual rentaAnual){
 
-        try{
-            this.rentaAnualService.addRentaAnual(rentaAnual);
-        } catch (RequestApiValidationException e) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Compruebe los datos de entrada");
-        } catch (Exception e){
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-
-        }
+        rentaAnualService.addRentaAnual(rentaAnual);
         return ResponseEntity.ok(rentaAnual);
     }
 

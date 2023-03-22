@@ -21,10 +21,9 @@ public class RentaAnualServiceImpl implements RentaAnualService {
     public RentaAnualServiceImpl(RentaAnualMapper rentaAnualMapper) {
         this.rentaAnualMapper = rentaAnualMapper;
     }
-
-    @Transactional
     @Override
-    public RentaAnual addRentaAnual(RentaAnual rentaAnual) throws RequiredMissingFieldException, WrongLengthFieldException {
+    @Transactional
+    public RentaAnual addRentaAnual(RentaAnual rentaAnual){
         //persona = this.addPersona(persona);
         //rentaAnual = this.addRentaAnualPersona(rentaAnual);
         //rentaAnual = this.addRentaAnualProfesion(rentaAnual);
