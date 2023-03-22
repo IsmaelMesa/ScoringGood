@@ -1,5 +1,9 @@
 package com.vehicleRentingPersona.vehicleRentingPersona.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.Date;
 
 public class Persona {
@@ -14,9 +18,12 @@ public class Persona {
     private Boolean direccionDomicilioSameAsNotificacion = true;
     private Direccion direccion_notificacion;
     private String nif;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private Date fecha_nacimiento;
 
     private String nacionalidad;
+    @Min(0)
+    @Max(8)
     private int scoring;
     private Date fecha_scoring;
     //private List<Telefono> telefonos;
