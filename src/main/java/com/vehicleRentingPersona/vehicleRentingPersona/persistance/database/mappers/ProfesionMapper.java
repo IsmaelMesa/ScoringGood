@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Select;
 public interface ProfesionMapper {
 
 
-    @Select("SELECT PERSONA_ID FROM PROFESION")
-    void existeProfesion(int id);
+    @Select("SELECT COUNT(PROFESION_ID) FROM PROFESION WHERE PROFESION_ID = #{profesionId}")
+    int existeProfesion(int profesionId);
 
 }
